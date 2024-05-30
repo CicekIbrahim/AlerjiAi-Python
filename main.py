@@ -13,7 +13,7 @@ app = Flask(__name__)
 
 def start_ngrok():
     ngrok_process = subprocess.Popen(['ngrok', 'http', '5000'])
-    time.sleep(2)
+    time.sleep(5)
     result = subprocess.run(['curl', '-s', 'http://localhost:4040/api/tunnels'], capture_output=True, text=True)
     result_json = json.loads(result.stdout)
     public_url = result_json['tunnels'][0]['public_url']
