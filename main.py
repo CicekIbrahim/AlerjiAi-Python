@@ -1,4 +1,5 @@
 from flask import Flask, request, jsonify
+from flask_cors import CORS
 import subprocess
 import time
 import os
@@ -6,10 +7,11 @@ import json
 import torch
 from ultralytics import YOLO
 from PIL import Image
-from llm import get_llm_response, encode_image  # Import functions from chatgpt.py
+from llm import get_llm_response, encode_image  
 from model import detect_with_yolov9
 
 app = Flask(__name__)
+CORS(app, resources={r"/*": {"origins": "*"}})  
 
 def start_ngrok():
     ngrok_process = subprocess.Popen(['ngrok', 'http', '5000'])
