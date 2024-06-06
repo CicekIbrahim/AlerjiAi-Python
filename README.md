@@ -36,8 +36,14 @@ Alerji AI is an application that helps users detect allergenic substances by sca
     ```bash
     pip install -r requirements.txt
     ```
+4. Insert your OpenAI API `SECRET_API_KEY` in the `.env` file
+   
+    ```bash
+    SECRET_API_KEY= Your Key here
+    BASE_URL=https://api.openai.com/v1/chat/completions
+    ```
 
-4. Start the project:
+5. Start the project:
     ```bash
     python main.py
     ```
