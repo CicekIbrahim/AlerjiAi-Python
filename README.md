@@ -13,8 +13,8 @@ Alerji AI is an application that helps users detect allergenic substances by sca
 ## Requirements
 
 - Python 3.8 or higher
-- Swift 5.0 or higher
-- Xcode 12.0 or higher
+- Swift 5.3 or higher
+- Xcode 15.0 or higher
 - [ngrok](https://ngrok.com/)
 
 ## Installation
